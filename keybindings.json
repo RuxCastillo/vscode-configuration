@@ -1,13 +1,53 @@
 // Place your key bindings in this file to override the defaults
 [
-	   {
-        "key": "alt+j",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active"
-    },
-    {
-	"key": "alt+k",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active"
-    },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly && vim.active",
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly && vim.active",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "parameterHintsNext",
+    "when": "parameterHintsVisible",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "parameterHintsPrevious",
+    "when": "parameterHintsVisible",
+  },
 ]

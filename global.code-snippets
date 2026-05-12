@@ -1,0 +1,264 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+	"useStateSnippet": {
+		"prefix": "useStateSnippet",
+		"body": [
+			"const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState});",
+		],
+		"description": "useState hook",
+	},
+	"useEffectSnippet": {
+		"prefix": "useEffectSnippet",
+		"body": ["useEffect(() => {", "\t$0", "}, [${1}]);"],
+		"description": "useEffect hook",
+	},
+	"useRefSnippet": {
+		"prefix": "useRefSnippet",
+		"body": ["const ${1:ref} = useRef(${2:initialValue});"],
+		"description": "useRef hook",
+	},
+	"imp": {
+		"prefix": "imp",
+		"body": ["import ${2:moduleName} from '${1:module}';$0"],
+		"description": "Import default",
+	},
+	"imd": {
+		"prefix": "imd",
+		"body": ["import { $2 } from '${1:module}';$0"],
+		"description": "Import destructured",
+	},
+	"ime": {
+		"prefix": "ime",
+		"body": ["import * as ${2:alias} from '${1:module}';$0"],
+		"description": "Import everything as alias",
+	},
+	"ima": {
+		"prefix": "ima",
+		"body": [
+			"import { ${2:originalName} as ${3:aliasName} } from '${1:module}';$0",
+		],
+		"description": "Import as alias",
+	},
+	"exp": {
+		"prefix": "exp",
+		"body": ["export default ${1:moduleName};$0"],
+		"description": "Export default",
+	},
+	"enf": {
+		"prefix": "enf",
+		"body": ["export const ${1:functionName} = (${2:params}) => {$0};"],
+		"description": "Export named arrow function",
+	},
+	"fre": {
+		"prefix": "fre",
+		"body": ["${1:array}.forEach((${2:item}) => {", "\t$0", "});"],
+		"description": "forEach loop",
+	},
+	"fof": {
+		"prefix": "fof",
+		"body": ["for (let ${1:item} of ${2:object}) {", "\t$0", "}"],
+		"description": "for...of loop",
+	},
+	"fin": {
+		"prefix": "fin",
+		"body": ["for (let ${1:item} in ${2:object}) {", "\t$0", "}"],
+		"description": "for...in loop",
+	},
+	"anfn": {
+		"prefix": "anfn",
+		"body": ["(${1:params}) => {", "\t$0", "}"],
+		"description": "Anonymous arrow function",
+	},
+	"nfn": {
+		"prefix": "nfn",
+		"body": ["const ${1:name} = (${2:params}) => {", "\t$0", "}"],
+		"description": "Named arrow function",
+	},
+	"dob": {
+		"prefix": "dob",
+		"body": ["const { ${2:propertyName} } = ${1:objectToDestructure};$0"],
+		"description": "Destructuring object",
+	},
+	"dar": {
+		"prefix": "dar",
+		"body": ["const [${2:propertyName}] = ${1:arrayToDestructure};$0"],
+		"description": "Destructuring array",
+	},
+	"sti": {
+		"prefix": "sti",
+		"body": ["setInterval(() => {", "\t$0", "}, ${1:delay});"],
+		"description": "setInterval",
+	},
+	"sto": {
+		"prefix": "sto",
+		"body": ["setTimeout(() => {", "\t$0", "}, ${1:delay});"],
+		"description": "setTimeout",
+	},
+	"imrc": {
+		"prefix": "imrc",
+		"body": ["import React, { Component } from 'react';$0"],
+		"description": "Import React + Component",
+	},
+	"clg": {
+		"prefix": "clg",
+		"body": ["console.log(${1:object});$0"],
+		"description": "console.log",
+	},
+	"clo": {
+		"prefix": "clo",
+		"body": ["console.log('${1:object}', ${1:object});$0"],
+		"description": "console.log con nombre",
+	},
+	"clj": {
+		"prefix": "clj",
+		"body": [
+			"console.log('${1:object}', JSON.stringify(${1:object}, null, 2));$0",
+		],
+		"description": "console.log JSON.stringify",
+	},
+	"cas": {
+		"prefix": "cas",
+		"body": ["console.assert(${1:expression}, ${2:object});$0"],
+		"description": "console.assert",
+	},
+	"cer": {
+		"prefix": "cer",
+		"body": ["console.error(${1:object});$0"],
+		"description": "console.error",
+	},
+	"cwa": {
+		"prefix": "cwa",
+		"body": ["console.warn(${1:object});$0"],
+		"description": "console.warn",
+	},
+	"cin": {
+		"prefix": "cin",
+		"body": ["console.info(${1:object});$0"],
+		"description": "console.info",
+	},
+	"ctl": {
+		"prefix": "ctl",
+		"body": ["console.table(${1:object});$0"],
+		"description": "console.table",
+	},
+	"useQuery custom hook": {
+		"prefix": "rqGet",
+		"body": [
+			"export const useGet${1:Recurso} = () =>",
+			"\tuseQuery({",
+			"\t\tqueryKey: [\"${2:${1/(.*)/${1:/downcase}/}}\"],",
+			"\t\tqueryFn: get${1:Recurso},",
+			"\t});$0",
+		],
+		"description": "Custom hook useQuery simple",
+	},
+	"useQuery custom hook con params": {
+		"prefix": "rqGetParams",
+		"body": [
+			"export const useGet${1:Recurso} = (${2:params}: ${3:type}) =>",
+			"\tuseQuery({",
+			"\t\tqueryKey: [\"${4:${1/(.*)/${1:/downcase}/}}\", ${2:params}],",
+			"\t\tqueryFn: () => get${1:Recurso}(${2:params}),",
+			"\t\tplaceholderData: (prev) => prev,",
+			"\t});$0",
+		],
+		"description": "Custom hook useQuery con parámetros y placeholderData",
+	},
+	"useMutation custom hook full": {
+		"prefix": "rqMutation",
+		"body": [
+			"export const use${1:Accion}${2:Recurso} = () => {",
+			"\tconst queryClient = useQueryClient();",
+			"\tconst mutation = useMutation({",
+			"\t\tmutationKey: [\"${3:${2/(.*)/${1:/downcase}/}}Mutation${1}\"],",
+			"\t\tmutationFn: ${1/(.*)/${1:/downcase}/}${2:Recurso},",
+			"\t\tonSuccess: () => {",
+			"\t\t\ttoast.success(\"${4:Cambio realizado con éxito}\");",
+			"\t\t\tqueryClient.invalidateQueries({ queryKey: [\"${3:${2/(.*)/${1:/downcase}/}}\"] });",
+			"\t\t},",
+			"\t\tonError: () =>",
+			"\t\t\ttoast.error(",
+			"\t\t\t\t\"${5:Sucedio un error en la operación, por favor intentelo mas tarde}\"",
+			"\t\t\t),",
+			"\t});",
+			"\treturn mutation;",
+			"};$0",
+		],
+		"description": "Custom hook useMutation con queryClient, toast e invalidate",
+	},
+	"useMutation custom hook simple": {
+		"prefix": "rqMutationSimple",
+		"body": [
+			"export const use${1:Accion}${2:Recurso} = () =>",
+			"\tuseMutation({",
+			"\t\tmutationKey: [\"${3:${1/(.*)/${1:/downcase}/}${2}}\"],",
+			"\t\tmutationFn: ${1/(.*)/${1:/downcase}/}${2:Recurso},",
+			"\t});$0",
+		],
+		"description": "Custom hook useMutation simple sin queryClient",
+	},
+	"guard isLoading": {
+		"prefix": "ifLoading",
+		"body": ["if (isLoading || !data) {", "\treturn <IsLoading />;", "}$0"],
+		"description": "Guard clause para isLoading",
+	},
+	"guard isError": {
+		"prefix": "ifError",
+		"body": [
+			"if (isError) {",
+			"\treturn <IsError refetch={refetch} />;",
+			"}$0",
+		],
+		"description": "Guard clause para isError con refetch",
+	},
+	"guard isLoading + isError": {
+		"prefix": "ifGuards",
+		"body": [
+			"if (isLoading || !data) {",
+			"\treturn <IsLoading />;",
+			"}",
+			"if (isError) {",
+			"\treturn <IsError refetch={refetch} />;",
+			"}$0",
+		],
+		"description": "Ambos guards juntos",
+	},
+	"uso useGet con guards": {
+		"prefix": "rqUseGet",
+		"body": [
+			"const { data, isLoading, refetch, isError } = useGet${1:Recurso}(${2:params});",
+			"if (isLoading || !data) {",
+			"\treturn <IsLoading />;",
+			"}",
+			"if (isError) {",
+			"\treturn <IsError refetch={refetch} />;",
+			"}$0",
+		],
+		"description": "Uso de hook custom + guards",
+	},
+}
